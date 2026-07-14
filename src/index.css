@@ -343,6 +343,11 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1
   .float-badge { font-size: 0.78rem; padding: 9px 12px; }
 }
 
+/* ================= SHOWREEL VIDEO ================= */
+.reel-video { width: 100%; height: 100%; object-fit: cover; display: block; background: #000; border: 0; }
+.reel-frame.has-video::after { display: none; }
+.reel-frame.has-video .reel-chips { top: 18px; bottom: auto; pointer-events: none; }
+
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
