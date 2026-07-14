@@ -1,3 +1,4 @@
+import { FaPlay } from 'react-icons/fa'
 import Reveal from './Reveal'
 import { projects } from '../data/content'
 
@@ -26,7 +27,7 @@ export default function Projects() {
               <img src={p.src} alt={p.title} loading="lazy" />
               <div className="project-body">
                 <span className="project-cat">{p.cat}</span>
-                <span className="play-sm">▶</span>
+                <span className="play-sm"><FaPlay /></span>
                 <div className="project-meta">
                   <strong>{p.title}</strong>
                   <span>{p.views}</span>

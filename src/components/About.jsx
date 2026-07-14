@@ -6,7 +6,7 @@ export default function About() {
     <section id="about" className="section">
       <div className="container about-grid">
         <Reveal className="about-media">
-          <img src="/person.webp" alt="Jenson Eldho" loading="lazy" />
+          <img src={`${import.meta.env.BASE_URL}person.png`} alt="Jenson Eldho" loading="lazy" />
           <div className="about-exp">
             5+<span>Years<br />Experience</span>
           </div>

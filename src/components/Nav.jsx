@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { FaArrowRight } from 'react-icons/fa'
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -24,7 +25,7 @@ export default function Nav() {
           <a href="#contact">Contact</a>
         </div>
         <div className="nav-cta">
-          <a href="#contact" className="btn btn-primary">Hire Me</a>
+          <a href="#contact" className="btn btn-primary"><FaArrowRight /> Hire Me</a>
         </div>
       </div>
     </nav>

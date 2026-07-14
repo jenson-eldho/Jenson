@@ -1,3 +1,5 @@
+import { FaYoutube, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa'
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -37,10 +39,10 @@ export default function Footer() {
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Jenson Eldho. All rights reserved.</span>
           <div className="socials">
-            <a href="#" aria-label="YouTube">▶</a>
-            <a href="#" aria-label="Instagram">◎</a>
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="X">✕</a>
+            <a href="#" aria-label="YouTube"><FaYoutube /></a>
+            <a href="#" aria-label="Instagram"><FaInstagram /></a>
+            <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
+            <a href="#" aria-label="GitHub"><FaGithub /></a>
           </div>
         </div>
       </div>

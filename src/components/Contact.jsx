@@ -1,3 +1,4 @@
+import { FaEnvelope, FaPlay } from 'react-icons/fa'
 import Reveal from './Reveal'
 
 export default function Contact() {
@@ -11,8 +12,8 @@ export default function Contact() {
             project — I reply within 24 hours.
           </p>
           <div className="hero-cta" style={{ justifyContent: 'center' }}>
-            <a href="mailto:hello@jensoneldho.example" className="btn btn-white">Hire Me</a>
-            <a href="#showreel" className="btn btn-outline-white">▶ Watch Showreel</a>
+            <a href="mailto:hello@jensoneldho.example" className="btn btn-white"><FaEnvelope /> Hire Me</a>
+            <a href="#showreel" className="btn btn-outline-white"><FaPlay /> Watch Showreel</a>
           </div>
         </Reveal>
       </div>

@@ -1,23 +1,19 @@
-import { stats, softwareBadges } from '../data/content'
+import { FaPlay, FaArrowRight } from 'react-icons/fa'
+import { stats } from '../data/content'
 
 export default function Hero() {
   return (
     <header id="top" className="hero">
       <div className="container hero-grid">
-        <div>
-          <span className="eyebrow">🎬 Available for freelance</span>
-          <h1>
-            Professional <span className="accent">Video Editor</span>
-          </h1>
+        <div className="hero-copy">
+          <p className="hero-hi">Hi, I&apos;m</p>
+          <h1>Jenson Eldho</h1>
+          <p className="hero-role">Professional Video Editor</p>
           <p className="hero-sub">
-            I create cinematic, engaging videos that hold attention and move
-            people — cutting for rhythm, grading for mood, and shaping sound
-            that makes every frame feel alive.
+            I transform raw footage into cinematic stories that engage audiences
+            and help brands, creators, and businesses grow through creative editing.
           </p>
-          <div className="hero-cta">
-            <a href="#showreel" className="btn btn-primary">▶ Watch Showreel</a>
-            <a href="#contact" className="btn btn-ghost">Hire Me</a>
-          </div>
+
           <div className="hero-stats">
             {stats.map((s) => (
               <div key={s.label}>
@@ -26,22 +22,20 @@ export default function Hero() {
               </div>
             ))}
           </div>
+
+          <div className="hero-cta">
+            <a href="#showreel" className="btn btn-primary">
+              <FaPlay /> Watch Showreel
+            </a>
+            <a href="#contact" className="btn btn-ghost">
+              <FaArrowRight /> Hire Me
+            </a>
+          </div>
         </div>
 
         <div className="hero-visual">
           <div className="hero-glow" />
-          <img className="hero-cutout" src="/person.webp" alt="Jenson Eldho, video editor" />
-
-          {softwareBadges.map((b, i) => (
-            <div key={b.name} className={`float-badge fb${i + 1}`}>
-              <span className="fb-logo" style={{ color: b.color }}>{b.letters}</span>
-              {b.name}
-            </div>
-          ))}
-
-          <div className="hero-badge b1">
-            <span className="dot" /> Available now
-          </div>
+          <img className="hero-cutout" src={`${import.meta.env.BASE_URL}person.png`} alt="Jenson Eldho, professional video editor" />
         </div>
       </div>
     </header>

@@ -1,3 +1,4 @@
+import { FaPlay } from 'react-icons/fa'
 import Reveal from './Reveal'
 
 export default function Showreel() {
@@ -16,7 +17,7 @@ export default function Showreel() {
           <Reveal className="reel-frame">
             <img src="https://picsum.photos/seed/showreel-main/1280/720" alt="Showreel" loading="lazy" />
             <div className="reel-play">
-              <button className="play-btn" aria-label="Play showreel">▶</button>
+              <button className="play-btn" aria-label="Play showreel"><FaPlay /></button>
             </div>
             <div className="reel-chips">
               <span className="glass">4K · 60FPS</span>
