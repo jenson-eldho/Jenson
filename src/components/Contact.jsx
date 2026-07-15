@@ -12,7 +12,14 @@ export default function Contact() {
             project — I reply within 24 hours.
           </p>
           <div className="hero-cta" style={{ justifyContent: 'center' }}>
-            <a href="mailto:jensoneldho@gmail.com" className="btn btn-white"><FaEnvelope /> Get In Touch</a>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=jensoneldho@gmail.com"
+              className="btn btn-white"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaEnvelope /> Get In Touch
+            </a>
             <a href="#showreel" className="btn btn-outline-white"><FaPlay /> Watch Showreel</a>
           </div>
         </Reveal>
