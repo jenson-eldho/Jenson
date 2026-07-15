@@ -1,6 +1,26 @@
-import { FaStar } from 'react-icons/fa'
+import { useState } from 'react'
+import { FaStar, FaInstagram } from 'react-icons/fa'
 import Reveal from './Reveal'
 import { testimonials } from '../data/content'
+
+// Client photo with graceful fallback to the initials monogram if it fails to load.
+function ClientAvatar({ image, initials }) {
+  const [failed, setFailed] = useState(false)
+  const src = image ? `${import.meta.env.BASE_URL}${image}` : null
+
+  if (!src || failed) {
+    return <span className="testi-logo" aria-hidden="true">{initials}</span>
+  }
+  return (
+    <img
+      className="testi-avatar"
+      src={src}
+      alt=""
+      loading="lazy"
+      onError={() => setFailed(true)}
+    />
+  )
+}
 
 export default function Testimonials() {
   return (
@@ -18,10 +38,18 @@ export default function Testimonials() {
               </div>
               <p>“{t.quote}”</p>
               <div className="testi-user">
-                <img src={t.avatar} alt={t.name} loading="lazy" />
+                <ClientAvatar image={t.image} initials={t.initials} />
                 <div>
                   <strong>{t.name}</strong>
                   <span>{t.role}</span>
+                  <a
+                    className="testi-ig"
+                    href={t.url || `https://www.instagram.com/${t.handle}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaInstagram /> @{t.handle}
+                  </a>
                 </div>
               </div>
             </Reveal>

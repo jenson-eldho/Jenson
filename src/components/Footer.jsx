@@ -1,4 +1,8 @@
-import { FaYoutube, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa'
+import { FaYoutube, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { SiGoogledrive } from 'react-icons/si'
+
+// Replace with your Google Drive portfolio/CV folder link
+const DRIVE_URL = 'https://drive.google.com/drive/folders/your-portfolio-folder-id'
 
 export default function Footer() {
   return (
@@ -26,12 +30,12 @@ export default function Footer() {
             <div className="footer-col">
               <h5>Explore</h5>
               <a href="#work">Work</a>
-              <a href="#pricing">Pricing</a>
               <a href="#showreel">Showreel</a>
+              <a href="#skills">Skills</a>
             </div>
             <div className="footer-col">
               <h5>Contact</h5>
-              <a href="mailto:hello@jensoneldho.example">hello@jensoneldho.example</a>
+              <a href="mailto:jensoneldho@gmail.com">jensoneldho@gmail.com</a>
               <a href="#contact">Start a project</a>
             </div>
           </div>
@@ -42,7 +46,7 @@ export default function Footer() {
             <a href="#" aria-label="YouTube"><FaYoutube /></a>
             <a href="#" aria-label="Instagram"><FaInstagram /></a>
             <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
-            <a href="#" aria-label="GitHub"><FaGithub /></a>
+            <a href={DRIVE_URL} target="_blank" rel="noreferrer" aria-label="Google Drive portfolio"><SiGoogledrive /></a>
           </div>
         </div>
       </div>

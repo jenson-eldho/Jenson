@@ -100,16 +100,31 @@ export const skillTags = [
 
 export const testimonials = [
   {
-    quote: 'Jenson turned 40 hours of raw footage into a trailer that got us funded. His sense of pacing is unreal.',
-    name: 'Ava Mitchell', role: 'Director, Northlight Films', avatar: img('t-ava', 120, 120),
+    quote: 'Working with Jenson was a wonderful experience. He beautifully captured the warmth, simplicity, and story behind our restaurant. The promotional videos perfectly reflected our farm-to-table concept and connected well with our audience. His creativity, attention to detail, and professionalism exceeded our expectations.',
+    name: 'Padheyam',
+    role: 'Restaurant & Organic Food Brand',
+    handle: '_padheyam_',
+    url: 'https://www.instagram.com/__padheyam__?igsh=MTB1b2pndjRraGdhNg==',
+    image: 'images/Padheyam.png',
+    initials: 'Pd',
   },
   {
-    quote: 'Our Reels went from flat to 1.9M views. The hooks, the cuts, the captions — everything just works.',
-    name: 'Daniel Cho', role: 'Founder, Sprout', avatar: img('t-dan', 120, 120),
+    quote: 'Jenson has an incredible eye for storytelling. Every wedding highlight video he edited captured the emotions, energy, and beauty of the day perfectly. His edits consistently impressed both our team and our clients. We highly recommend him for anyone looking for high-quality cinematic editing.',
+    name: 'Dazzle Creations Photography',
+    role: 'Wedding Photography & Videography',
+    handle: 'dazzle_creations_photography',
+    url: 'https://www.instagram.com/dazzle_creations_photography',
+    image: 'images/Dazzle.png',
+    initials: 'Dc',
   },
   {
-    quote: 'The color grade gave our brand film a look that felt like a feature film. Fast, reliable, and creative.',
-    name: 'Priya Nair', role: 'Marketing Lead, Meridian', avatar: img('t-priya', 120, 120),
+    quote: 'Jenson delivered outstanding promotional videos that truly showcased the quality of our catering services and hotel. His edits helped us present our brand in a modern and professional way while attracting more attention on social media. He understands exactly how to create engaging promotional content.',
+    name: 'Jeffin Caterers',
+    role: 'Catering Service & Hotel',
+    handle: 'jeffin_caterers',
+    url: 'https://www.instagram.com/jeffin_caterers',
+    image: 'images/Jeffin.png',
+    initials: 'Jc',
   },
 ]
 
