@@ -275,6 +275,9 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1
 .footer-col a { display: block; color: var(--ink-soft); font-size: 0.92rem; padding: 5px 0; transition: color 0.2s ease; }
 .footer-col a:hover { color: var(--orange-ink); }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--line); font-size: 0.85rem; color: var(--ink-faint); }
+.footer-credit { text-align: center; margin-top: 16px; font-size: 0.78rem; color: var(--ink-faint); }
+.footer-credit a { color: var(--orange); font-weight: 600; cursor: pointer; transition: color 0.2s ease, transform 0.2s ease; display: inline-block; }
+.footer-credit a:hover { color: var(--orange-2); text-decoration: underline; transform: translateY(-1px); }
 .socials { display: flex; gap: 10px; }
 .socials a { width: 38px; height: 38px; border-radius: 10px; border: 1px solid var(--line); display: grid; place-items: center; transition: all 0.25s ease; }
 .socials a:hover { background: var(--orange-grad); color: #fff; border-color: transparent; transform: translateY(-3px); }

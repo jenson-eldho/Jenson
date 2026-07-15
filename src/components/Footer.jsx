@@ -35,11 +35,7 @@ export default function Footer() {
             </div>
             <div className="footer-col">
               <h5>Contact</h5>
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=jensoneldho@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >jensoneldho@gmail.com</a>
+              <a href="mailto:jensoneldho@gmail.com">jensoneldho@gmail.com</a>
               <a href="#contact">Start a project</a>
             </div>
           </div>
@@ -53,6 +49,14 @@ export default function Footer() {
             <a href={DRIVE_URL} target="_blank" rel="noreferrer" aria-label="Google Drive portfolio"><SiGoogledrive /></a>
           </div>
         </div>
+        <p className="footer-credit">
+          Website Designed &amp; Developed by{' '}
+          <a
+            href="https://www.instagram.com/basil_areeckal_/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Basil</a>
+        </p>
       </div>
     </footer>
   )
