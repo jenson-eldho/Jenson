@@ -35,7 +35,11 @@ export default function Footer() {
             </div>
             <div className="footer-col">
               <h5>Contact</h5>
-              <a href="mailto:jensoneldho@gmail.com">jensoneldho@gmail.com</a>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=jensoneldho@gmail.com&su=Project%20Inquiry&body=Hi%20Jenson,%0A%0AI%20found%20your%20portfolio%20and%20I'm%20interested%20in%20discussing%20a%20video%20editing%20project.%0A%0ALooking%20forward%20to%20hearing%20from%20you.%0A%0ABest%20regards,"
+                target="_blank"
+                rel="noopener noreferrer"
+              >jensoneldho@gmail.com</a>
               <a href="#contact">Start a project</a>
             </div>
           </div>
