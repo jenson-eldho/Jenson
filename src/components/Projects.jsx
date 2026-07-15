@@ -17,6 +17,7 @@ export default function Projects() {
           {projects.map((p, i) => (
             <Reveal
               as="a"
+              variant="scale"
               key={p.id}
               className="project"
               href={p.video || undefined}

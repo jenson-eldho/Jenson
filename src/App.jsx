@@ -1,3 +1,5 @@
+import Loader from './components/Loader'
+import ScrollTop from './components/ScrollTop'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Showreel from './components/Showreel'
@@ -14,6 +16,7 @@ import Footer from './components/Footer'
 export default function App() {
   return (
     <>
+      <Loader />
       <Nav />
       <main>
         <Hero />
@@ -28,6 +31,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <ScrollTop />
     </>
   )
 }

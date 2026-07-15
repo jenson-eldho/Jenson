@@ -1,4 +1,4 @@
-import { FaPlay, FaArrowRight } from 'react-icons/fa'
+import { FaPlay, FaDownload } from 'react-icons/fa'
 import { stats } from '../data/content'
 
 export default function Hero() {
@@ -27,8 +27,14 @@ export default function Hero() {
             <a href="#showreel" className="btn btn-primary">
               <FaPlay /> Watch Showreel
             </a>
-            <a href="#contact" className="btn btn-ghost">
-              <FaArrowRight /> Hire Me
+            <a
+              href={`${import.meta.env.BASE_URL}Jenson-Eldho-CV.pdf`}
+              className="btn btn-ghost"
+              download
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaDownload /> Download CV
             </a>
           </div>
         </div>

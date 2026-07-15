@@ -1,3 +1,4 @@
+import { FaFolderOpen, FaCheck } from 'react-icons/fa'
 import Reveal from './Reveal'
 import { aboutPoints } from '../data/content'
 
@@ -8,7 +9,7 @@ export default function About() {
         <Reveal className="about-media">
           <img src={`${import.meta.env.BASE_URL}person.png`} alt="Jenson Eldho" loading="lazy" />
           <div className="about-exp">
-            5+<span>Years<br />Experience</span>
+            1+<span>Year<br />Experience</span>
           </div>
         </Reveal>
         <Reveal className="about-copy">
@@ -27,10 +28,12 @@ export default function About() {
           </p>
           <ul className="about-points">
             {aboutPoints.map((p) => (
-              <li key={p}>{p}</li>
+              <li key={p}><FaCheck /> {p}</li>
             ))}
           </ul>
-          <a href="#contact" className="btn btn-primary">Hire Me</a>
+          <a href="#work" className="btn btn-primary">
+            <FaFolderOpen /> View My Projects
+          </a>
         </Reveal>
       </div>
     </section>

@@ -1,3 +1,4 @@
+import { FaStar } from 'react-icons/fa'
 import Reveal from './Reveal'
 import { testimonials } from '../data/content'
 
@@ -12,7 +13,9 @@ export default function Testimonials() {
         <div className="grid grid-3">
           {testimonials.map((t, i) => (
             <Reveal key={t.name} className="card testi" style={{ transitionDelay: `${i * 70}ms` }}>
-              <div className="testi-stars">★★★★★</div>
+              <div className="testi-stars">
+                {Array.from({ length: 5 }).map((_, k) => <FaStar key={k} />)}
+              </div>
               <p>“{t.quote}”</p>
               <div className="testi-user">
                 <img src={t.avatar} alt={t.name} loading="lazy" />

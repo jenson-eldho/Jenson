@@ -16,7 +16,7 @@ export default function Services() {
         <div className="grid grid-3">
           {services.map((s, i) => (
             <Reveal key={s.title} className="card service" style={{ transitionDelay: `${i * 60}ms` }}>
-              <div className="service-icon">{s.icon}</div>
+              <div className="service-icon"><s.icon /></div>
               <h3>{s.title}</h3>
               <p>{s.desc}</p>
               <div className="service-tags">

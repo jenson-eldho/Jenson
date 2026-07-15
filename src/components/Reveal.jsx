@@ -1,10 +1,11 @@
 import useReveal from '../hooks/useReveal'
 
-// Wraps children with a scroll-reveal animation. `as` lets it render any tag.
-export default function Reveal({ as: Tag = 'div', className = '', children, ...rest }) {
+// Scroll-reveal wrapper. `variant` picks the entrance direction:
+// 'up' (default), 'left', 'right', or 'scale'.
+export default function Reveal({ as: Tag = 'div', variant = 'up', className = '', children, ...rest }) {
   const ref = useReveal()
   return (
-    <Tag ref={ref} className={`reveal ${className}`} {...rest}>
+    <Tag ref={ref} className={`reveal reveal-${variant} ${className}`} {...rest}>
       {children}
     </Tag>
   )

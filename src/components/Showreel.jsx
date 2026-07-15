@@ -8,7 +8,7 @@ export default function Showreel() {
   return (
     <section id="showreel" className="section">
       <div className="showreel">
-        <div className="container" style={{ paddingTop: 84, paddingBottom: 84 }}>
+        <div className="container showreel-inner">
           <Reveal className="section-head">
             <span className="eyebrow"><FaPlay /> Featured Showreel</span>
             <h2 className="section-title">A reel of frames worth rewatching</h2>

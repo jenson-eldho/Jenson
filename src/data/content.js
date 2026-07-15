@@ -1,18 +1,23 @@
+import { FaVideo, FaVolumeUp, FaMobileAlt, FaFilm } from 'react-icons/fa'
+import { HiOutlineSparkles } from 'react-icons/hi'
+import { MdOutlineColorLens } from 'react-icons/md'
+
 // Placeholder media via Lorem Picsum. Swap `img()` URLs for real stills/thumbnails,
 // and drop real video links into the `video` fields when available.
 const img = (seed, w = 800, h = 600) => `https://picsum.photos/seed/${seed}/${w}/${h}`
 
 export const stats = [
   { num: '100+', label: 'Videos Edited' },
-  { num: '20+', label: 'Happy Clients' },
-  { num: '10M+', label: 'Views Generated' },
+  { num: '10+', label: 'Happy Clients' },
+  { num: '1M+', label: 'Views Generated' },
 ]
 
+// target = number to count up to, suffix = what trails it ('+', 'M+')
 export const statsBig = [
-  { num: '100+', label: 'Videos Edited' },
-  { num: '20+', label: 'Happy Clients' },
-  { num: '10M+', label: 'Views Generated' },
-  { num: '5+', label: 'Years Experience' },
+  { target: 100, suffix: '+', label: 'Videos Edited' },
+  { target: 10, suffix: '+', label: 'Happy Clients' },
+  { target: 1, suffix: 'M+', label: 'Views Generated' },
+  { target: 1, suffix: '+', label: 'Year Experience' },
 ]
 
 export const softwareBadges = [
@@ -32,32 +37,32 @@ export const marquee = [
 
 export const services = [
   {
-    icon: '🎬', title: 'Video Editing',
+    icon: FaVideo, title: 'Video Editing',
     desc: 'Narrative-first edits with tight pacing, seamless cuts, and rhythm that keeps viewers watching to the last frame.',
     tags: ['Premiere Pro', 'Storytelling', 'Pacing'],
   },
   {
-    icon: '✨', title: 'Motion Graphics',
+    icon: HiOutlineSparkles, title: 'Motion Graphics',
     desc: 'Custom titles, kinetic typography, and animated overlays that add polish and personality to every frame.',
     tags: ['After Effects', 'Titles', 'Animation'],
   },
   {
-    icon: '🎨', title: 'Color Grading',
+    icon: MdOutlineColorLens, title: 'Color Grading',
     desc: 'Cinematic looks and consistent color science — from moody film grades to clean, punchy commercial tones.',
     tags: ['DaVinci Resolve', 'LUTs', 'Cinematic'],
   },
   {
-    icon: '🔊', title: 'Sound Design',
+    icon: FaVolumeUp, title: 'Sound Design',
     desc: 'Clean dialogue, balanced mixes, and immersive sound beds that make the picture feel alive.',
     tags: ['Audition', 'Mixing', 'SFX'],
   },
   {
-    icon: '📱', title: 'Short-form Content',
+    icon: FaMobileAlt, title: 'Short-form Content',
     desc: 'Scroll-stopping Reels, Shorts, and TikToks engineered with hooks, captions, and trend-aware pacing.',
     tags: ['Reels', 'Hooks', 'Captions'],
   },
   {
-    icon: '🚀', title: 'Full Post-Production',
+    icon: FaFilm, title: 'Full Post-Production',
     desc: 'End-to-end delivery — assembly, graphics, grade, sound, and export specs tuned for every platform.',
     tags: ['Delivery', 'Workflow', 'Multi-platform'],
   },
