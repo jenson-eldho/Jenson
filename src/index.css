@@ -404,7 +404,9 @@ button.project { padding: 0; border: 0; background: none; color: inherit; font: 
 .reel-frame.has-video .reel-chips { top: 18px; bottom: auto; pointer-events: none; }
 
 @media (max-width: 768px) {
-  .showreel-inner { padding-top: 41px; padding-bottom: 56px; padding-left: 18px; padding-right: 18px; }
+  /* Higher specificity than the `.container { padding: 0 Npx }` overrides so the
+     dark bottom space below the video isn't reset to 0 on small screens. */
+  .showreel .showreel-inner { padding-top: 41px; padding-bottom: 64px; padding-left: 18px; padding-right: 18px; }
   /* Full-width but never past the viewport, centered, with safe side gutters from the
      container padding. 16:9 aspect is preserved by the base .reel-frame rule. */
   .reel-frame.has-video {
