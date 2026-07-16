@@ -38,9 +38,14 @@ export default function Loader() {
   return (
     <div className={`loader ${ready ? 'is-ready' : ''}`} role="status" aria-live="polite">
       <div className="loader-inner">
-        <div className="loader-mark">JE</div>
+        <img
+          className="loader-logo"
+          src={`${import.meta.env.BASE_URL}images/jenson.png`}
+          alt="Jenson Eldho"
+          width="84"
+          height="84"
+        />
         <div className="loader-spinner" aria-hidden="true" />
-        <p className="loader-text">Loading&nbsp;portfolio…</p>
       </div>
     </div>
   )

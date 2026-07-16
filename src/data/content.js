@@ -65,10 +65,10 @@ export const services = [
 
 // YouTube-backed projects. `youtubeId` drives both the thumbnail and the inline embed.
 export const projects = [
-  { id: 1, title: 'Red Bull Event Edit', cat: 'Event Highlights', youtubeId: 'FPqIWrHjyS8', cover: 'images/redbull-event-cover.jpg' },
+  { id: 1, title: 'Red Bull Event Edit', cat: 'Event Highlights', youtubeId: 'FPqIWrHjyS8', cover: 'images/RedBull.png' },
   { id: 2, title: 'Motion Graphics Showcase', cat: 'Motion Graphics', youtubeId: 'LY9iOphx9Ac' },
   { id: 3, title: 'Cafe Commercial', cat: 'Brand Commercial', youtubeId: '5AELGBE1jKI' },
-  { id: 4, title: 'Food Commercial', cat: 'Food Commercial', youtubeId: 'r34nDRb6enI', cover: 'images/food-commercial-cover.jpg' },
+  { id: 4, title: 'Food Commercial', cat: 'Food Commercial', youtubeId: 'r34nDRb6enI', cover: 'images/Coffe.png' },
 ]
 
 export const software = [

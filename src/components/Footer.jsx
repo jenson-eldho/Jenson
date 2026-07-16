@@ -54,7 +54,7 @@ export default function Footer() {
           </div>
         </div>
         <p className="footer-credit">
-          Website Designed &amp; Developed by{' '}
+          Designed &amp; Developed by{' '}
           <a
             href="https://www.instagram.com/basil_areeckal_/"
             target="_blank"

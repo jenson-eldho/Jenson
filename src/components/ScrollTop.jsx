@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { FiArrowUp } from 'react-icons/fi'
+import { scrollToTop } from '../lib/lenis'
 
 export default function ScrollTop() {
   const [show, setShow] = useState(false)
@@ -11,10 +12,7 @@ export default function ScrollTop() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const toTop = () => {
-    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' })
-  }
+  const toTop = () => scrollToTop()
 
   return (
     <button
