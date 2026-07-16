@@ -1,8 +1,7 @@
-import { FaYoutube, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaYoutube, FaInstagram, FaLinkedinIn, FaBehance } from 'react-icons/fa'
 import { SiGoogledrive } from 'react-icons/si'
 
-// Replace with your Google Drive portfolio/CV folder link
-const DRIVE_URL = 'https://drive.google.com/drive/folders/your-portfolio-folder-id'
+const DRIVE_URL = 'https://drive.google.com/drive/folders/1F2YVh0emk5rKyzZfyq59B2xFz9cOc4OY?usp=sharing'
 
 export default function Footer() {
   return (
@@ -47,10 +46,11 @@ export default function Footer() {
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Jenson Eldho. All rights reserved.</span>
           <div className="socials">
-            <a href="#" aria-label="YouTube"><FaYoutube /></a>
-            <a href="#" aria-label="Instagram"><FaInstagram /></a>
-            <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
-            <a href={DRIVE_URL} target="_blank" rel="noreferrer" aria-label="Google Drive portfolio"><SiGoogledrive /></a>
+            <a href="https://youtube.com/@jensoneldho904?si=udlKvJRbkPaQoNVz" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube /></a>
+            <a href="https://www.instagram.com/jenson_eldho?igsh=MWdrOHgyNXpqMG1kZg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
+            <a href="https://www.linkedin.com/in/jenson-eldho-7a3097342?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
+            <a href="https://www.behance.net/jensoneldho" target="_blank" rel="noopener noreferrer" aria-label="Behance"><FaBehance /></a>
+            <a href={DRIVE_URL} target="_blank" rel="noopener noreferrer" aria-label="Google Drive portfolio"><SiGoogledrive /></a>
           </div>
         </div>
         <p className="footer-credit">

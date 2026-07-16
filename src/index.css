@@ -213,8 +213,8 @@ button.project { padding: 0; border: 0; background: none; color: inherit; font: 
 }
 
 /* ================= SOFTWARE ================= */
-.software-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; }
-.soft { padding: 26px 18px; text-align: center; }
+.software-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+.soft { flex: 0 0 210px; padding: 26px 18px; text-align: center; }
 .soft-logo { width: 62px; height: 62px; margin: 0 auto 14px; border-radius: 16px; display: grid; place-items: center; font-family: var(--font-head); font-weight: 800; font-size: 1.25rem; color: #fff; }
 .soft h4 { font-size: 0.98rem; }
 .soft span { font-size: 0.78rem; color: var(--ink-faint); }
@@ -309,6 +309,7 @@ button.project { padding: 0; border: 0; background: none; color: inherit; font: 
 @media (max-width: 620px) {
   .section { padding: 54px 0; }
   .grid-3, .grid-2, .process-grid, .pricing-grid, .software-grid { grid-template-columns: 1fr; }
+  .soft { flex-basis: 100%; }
   .container { padding: 0 20px; }
   .showreel, .contact-box { margin: 0; border-radius: 26px; }
   .hero-stats { gap: 22px; }

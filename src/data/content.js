@@ -19,7 +19,6 @@ export const statsBig = [
 export const softwareBadges = [
   { name: 'Premiere Pro', letters: 'Pr', color: '#9a9dff' },
   { name: 'After Effects', letters: 'Ae', color: '#c39bff' },
-  { name: 'DaVinci Resolve', letters: 'DR', color: '#ff9d3d' },
 ]
 
 export const aboutPoints = [
@@ -45,12 +44,12 @@ export const services = [
   {
     icon: MdOutlineColorLens, title: 'Color Grading',
     desc: 'Cinematic looks and consistent color science — from moody film grades to clean, punchy commercial tones.',
-    tags: ['DaVinci Resolve', 'LUTs', 'Cinematic'],
+    tags: ['LUTs', 'Cinematic'],
   },
   {
     icon: FaVolumeUp, title: 'Sound Design',
     desc: 'Clean dialogue, balanced mixes, and immersive sound beds that make the picture feel alive.',
-    tags: ['Audition', 'Mixing', 'SFX'],
+    tags: ['Mixing', 'SFX'],
   },
   {
     icon: FaMobileAlt, title: 'Short-form Content',
@@ -75,9 +74,7 @@ export const projects = [
 export const software = [
   { name: 'Premiere Pro', short: 'Editing', letters: 'Pr', color: '#9999ff' },
   { name: 'After Effects', short: 'Motion', letters: 'Ae', color: '#c17bff' },
-  { name: 'DaVinci Resolve', short: 'Color', letters: 'DR', color: '#ff7a00' },
   { name: 'Photoshop', short: 'Design', letters: 'Ps', color: '#31a8ff' },
-  { name: 'Audition', short: 'Audio', letters: 'Au', color: '#66ff99' },
 ]
 
 export const skillBars = [
