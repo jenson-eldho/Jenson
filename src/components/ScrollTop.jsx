@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { FaArrowUp } from 'react-icons/fa'
+import { FiArrowUp } from 'react-icons/fi'
 
 export default function ScrollTop() {
   const [show, setShow] = useState(false)
@@ -22,7 +22,7 @@ export default function ScrollTop() {
       onClick={toTop}
       aria-label="Scroll to top"
     >
-      <FaArrowUp />
+      <FiArrowUp />
     </button>
   )
 }

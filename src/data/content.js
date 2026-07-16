@@ -2,10 +2,6 @@ import { FaVideo, FaVolumeUp, FaMobileAlt, FaFilm } from 'react-icons/fa'
 import { HiOutlineSparkles } from 'react-icons/hi'
 import { MdOutlineColorLens } from 'react-icons/md'
 
-// Placeholder media via Lorem Picsum. Swap `img()` URLs for real stills/thumbnails,
-// and drop real video links into the `video` fields when available.
-const img = (seed, w = 800, h = 600) => `https://picsum.photos/seed/${seed}/${w}/${h}`
-
 export const stats = [
   { num: '100+', label: 'Videos Edited' },
   { num: '10+', label: 'Happy Clients' },
@@ -68,13 +64,12 @@ export const services = [
   },
 ]
 
+// YouTube-backed projects. `youtubeId` drives both the thumbnail and the inline embed.
 export const projects = [
-  { id: 1, title: 'Northlight — Doc Trailer', cat: 'Documentary', views: '2.4M views', src: img('proj-north', 900, 620), video: '' },
-  { id: 2, title: 'Undertow — Music Video', cat: 'Music Video', views: '5.1M views', src: img('proj-under', 900, 620), video: '' },
-  { id: 3, title: 'Meridian — Brand Film', cat: 'Brand Film', views: '880K views', src: img('proj-merid', 900, 620), video: '' },
-  { id: 4, title: 'Sprout — 30s Reel', cat: 'Short-form', views: '1.9M views', src: img('proj-sprout', 900, 620), video: '' },
-  { id: 5, title: 'Apex — Product Spot', cat: 'Commercial', views: '640K views', src: img('proj-apex', 900, 620), video: '' },
-  { id: 6, title: 'Wander — Travel Cut', cat: 'YouTube', views: '3.3M views', src: img('proj-wander', 900, 620), video: '' },
+  { id: 1, title: 'Red Bull Event Edit', cat: 'Event Highlights', youtubeId: 'FPqIWrHjyS8', cover: 'images/redbull-event-cover.jpg' },
+  { id: 2, title: 'Motion Graphics Showcase', cat: 'Motion Graphics', youtubeId: 'LY9iOphx9Ac' },
+  { id: 3, title: 'Cafe Commercial', cat: 'Brand Commercial', youtubeId: '5AELGBE1jKI' },
+  { id: 4, title: 'Food Commercial', cat: 'Food Commercial', youtubeId: 'r34nDRb6enI', cover: 'images/food-commercial-cover.jpg' },
 ]
 
 export const software = [
