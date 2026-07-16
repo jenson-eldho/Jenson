@@ -370,9 +370,9 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1
 .showreel-inner { padding-top: 61px; padding-bottom: 61px; }
 .reel-frame.has-video {
   width: 100%; max-width: 980px; margin: 44px auto 0; border-radius: 16px;
-  box-shadow: 0 40px 90px -40px rgba(0, 0, 0, 0.75);
+  box-sizing: border-box; box-shadow: 0 40px 90px -40px rgba(0, 0, 0, 0.75);
 }
-.reel-video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; background: #000; }
+.reel-video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; background: #000; object-fit: contain; }
 /* Custom cinematic poster shown before playback (click to load the video) */
 .reel-poster { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; padding: 0; border: 0; background: #000; cursor: pointer; display: block; overflow: hidden; }
 .reel-poster img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease; }
@@ -380,10 +380,17 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1
 .reel-frame.has-video::after { display: none; }
 .reel-frame.has-video .reel-chips { top: 18px; bottom: auto; pointer-events: none; }
 
-@media (max-width: 760px) {
-  .showreel-inner { padding-top: 41px; padding-bottom: 41px; }
-  .reel-frame.has-video { margin-top: 30px; border-radius: 10px; }
+@media (max-width: 768px) {
+  .showreel-inner { padding-top: 41px; padding-bottom: 41px; padding-left: 18px; padding-right: 18px; }
+  /* Full-width but never past the viewport, centered, with safe side gutters from the
+     container padding. 16:9 aspect is preserved by the base .reel-frame rule. */
+  .reel-frame.has-video {
+    width: 100%; max-width: 100%; margin: 30px auto 0;
+    border-radius: 10px; box-sizing: border-box;
+  }
   .reel-frame.has-video .reel-chips { display: none; }
+  /* Show the entire poster frame (no crop/zoom) on small screens. */
+  .reel-poster img { object-fit: contain; }
 }
 
 /* ================= MOBILE NAV (hamburger + drawer) ================= */

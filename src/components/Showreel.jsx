@@ -2,8 +2,9 @@ import { useState } from 'react'
 import { FaPlay } from 'react-icons/fa'
 import Reveal from './Reveal'
 
-// Google Drive video embed (file shared as "Anyone with the link").
-const SHOWREEL_EMBED = 'https://drive.google.com/file/d/1PSOeANK-0b_SDBE4QatQoxm6LTme-n9j/preview'
+// Direct, hosted video file (MP4/WebM served over https with byte-range support).
+// Paste your hosted showreel URL here — e.g. a CDN / object-storage link.
+const SHOWREEL_VIDEO_URL = 'REPLACE_WITH_YOUR_HOSTED_MP4_URL'
 const POSTER = `${import.meta.env.BASE_URL}images/showreel-thumbnail.jpg`
 
 export default function Showreel() {
@@ -23,12 +24,15 @@ export default function Showreel() {
           </Reveal>
           <Reveal className="reel-frame has-video">
             {playing ? (
-              <iframe
+              <video
                 className="reel-video"
-                src={`${SHOWREEL_EMBED}?autoplay=1`}
+                src={SHOWREEL_VIDEO_URL}
+                poster={POSTER}
+                controls
+                autoPlay
+                playsInline
+                preload="metadata"
                 title="Jenson Eldho — Showreel"
-                allow="autoplay; fullscreen"
-                allowFullScreen
               />
             ) : (
               <button
