@@ -21,10 +21,10 @@ export default function Footer() {
           <div className="footer-cols">
             <div className="footer-col">
               <h5>Services</h5>
-              <a href="#services">Video Editing</a>
-              <a href="#services">Motion Graphics</a>
-              <a href="#services">Color Grading</a>
-              <a href="#services">Short-form</a>
+              <a href="#video-editing">Video Editing</a>
+              <a href="#motion-graphics">Motion Graphics</a>
+              <a href="#color-grading">Color Grading</a>
+              <a href="#short-form-content">Short-form</a>
             </div>
             <div className="footer-col">
               <h5>Explore</h5>

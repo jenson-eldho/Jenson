@@ -1,6 +1,9 @@
 import Reveal from './Reveal'
 import { services } from '../data/content'
 
+// Slug used as each card's anchor id (e.g. "Short-form Content" -> "short-form-content").
+const slug = (title) => title.toLowerCase().replace(/\s+/g, '-')
+
 export default function Services() {
   return (
     <section id="services" className="section">
@@ -15,7 +18,7 @@ export default function Services() {
         </Reveal>
         <div className="grid grid-3">
           {services.map((s, i) => (
-            <Reveal key={s.title} className="card service" style={{ transitionDelay: `${i * 60}ms` }}>
+            <Reveal key={s.title} id={slug(s.title)} className="card service" style={{ transitionDelay: `${i * 60}ms` }}>
               <div className="service-icon"><s.icon /></div>
               <h3>{s.title}</h3>
               <p>{s.desc}</p>

@@ -2,13 +2,15 @@ import { useState } from 'react'
 import { FaPlay } from 'react-icons/fa'
 import Reveal from './Reveal'
 
-// Direct, hosted video file (MP4/WebM served over https with byte-range support).
-// Paste your hosted showreel URL here — e.g. a CDN / object-storage link.
-const SHOWREEL_VIDEO_URL = 'REPLACE_WITH_YOUR_HOSTED_MP4_URL'
-const POSTER = `${import.meta.env.BASE_URL}images/showreel-thumbnail.jpg`
+// YouTube showreel. The iframe is only mounted after the user clicks the poster,
+// so no YouTube script loads (and nothing autoplays) on page load.
+const YT_ID = 'KuiAQwvGj68'
+const EMBED = `https://www.youtube.com/embed/${YT_ID}?rel=0&modestbranding=1&playsinline=1&autoplay=1`
 
 export default function Showreel() {
   const [playing, setPlaying] = useState(false)
+  const [thumbFallback, setThumbFallback] = useState(false)
+  const poster = `https://img.youtube.com/vi/${YT_ID}/${thumbFallback ? 'hqdefault' : 'maxresdefault'}.jpg`
 
   return (
     <section id="showreel" className="section">
@@ -24,15 +26,13 @@ export default function Showreel() {
           </Reveal>
           <Reveal className="reel-frame has-video">
             {playing ? (
-              <video
+              <iframe
                 className="reel-video"
-                src={SHOWREEL_VIDEO_URL}
-                poster={POSTER}
-                controls
-                autoPlay
-                playsInline
-                preload="metadata"
+                src={EMBED}
                 title="Jenson Eldho — Showreel"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
               />
             ) : (
               <button
@@ -41,7 +41,12 @@ export default function Showreel() {
                 onClick={() => setPlaying(true)}
                 aria-label="Play showreel"
               >
-                <img src={POSTER} alt="Jenson Eldho — Showreel: Video Editing Portfolio" loading="lazy" />
+                <img
+                  src={poster}
+                  alt="Jenson Eldho — Showreel: Video Editing Portfolio"
+                  loading="lazy"
+                  onError={() => setThumbFallback(true)}
+                />
               </button>
             )}
           </Reveal>
