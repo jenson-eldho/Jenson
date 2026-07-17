@@ -38,7 +38,7 @@ export const services = [
   },
   {
     icon: HiOutlineSparkles, title: 'Motion Graphics',
-    desc: 'Custom titles, kinetic typography, and animated overlays that add polish and personality to every frame.',
+    desc: 'Custom titles and animated overlays that add polish and personality to every frame.',
     tags: ['After Effects', 'Titles', 'Animation'],
   },
   {
@@ -80,13 +80,13 @@ export const software = [
 export const skillBars = [
   { name: 'Video Editing', level: 96 },
   { name: 'Color Grading', level: 90 },
-  { name: 'Motion Graphics', level: 84 },
+  { name: 'Motion Graphics', level: 65 },
   { name: 'Sound Design', level: 78 },
   { name: 'Short-form / Social', level: 92 },
 ]
 
 export const skillTags = [
-  'Storytelling', 'Pacing & Rhythm', 'Cinematic Grading', 'Kinetic Typography',
+  'Storytelling', 'Pacing & Rhythm', 'Cinematic Grading',
   'Multicam', 'Beat Syncing', 'Captioning', 'Thumbnail Design', 'Proxy Workflow', 'Delivery Specs',
 ]
 

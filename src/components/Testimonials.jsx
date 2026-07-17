@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FaStar, FaInstagram } from 'react-icons/fa'
+import { FaStar } from 'react-icons/fa'
 import Reveal from './Reveal'
 import { testimonials } from '../data/content'
 
@@ -42,14 +42,6 @@ export default function Testimonials() {
                 <div>
                   <strong>{t.name}</strong>
                   <span>{t.role}</span>
-                  <a
-                    className="testi-ig"
-                    href={t.url || `https://www.instagram.com/${t.handle}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaInstagram /> @{t.handle}
-                  </a>
                 </div>
               </div>
             </Reveal>

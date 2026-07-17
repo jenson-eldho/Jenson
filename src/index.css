@@ -463,6 +463,26 @@ button.project { padding: 0; border: 0; background: none; color: inherit; font: 
 }
 /* Reserve a fixed box (object-fit keeps aspect/quality) so the logo never shifts layout. */
 .loader-logo { width: 120px; height: 120px; object-fit: contain; display: block; animation: loaderLogoIn 0.6s ease both; }
+/* Animated SVG logo: bigger orange square that does a one-time finish (scale + glow)
+   instead of the looping bounce. */
+.loader-mark.loader-draw {
+  width: 104px; height: 104px; border-radius: 26px;
+  animation: loaderFinish 0.6s ease 1.5s both;
+}
+.loader-draw svg { width: 66%; height: 66%; overflow: visible; }
+.loader-draw path {
+  fill: none; stroke: #fff; stroke-width: 9; stroke-linecap: round; stroke-linejoin: round;
+  stroke-dasharray: 1; stroke-dashoffset: 1;
+}
+.loader-draw .ld-j { animation: loaderDraw 0.7s ease forwards; }
+.loader-draw .ld-e { animation: loaderDraw 0.8s ease 0.7s forwards; }
+@media (max-width: 600px) { .loader-mark.loader-draw { width: 88px; height: 88px; border-radius: 22px; } }
+@keyframes loaderDraw { to { stroke-dashoffset: 0; } }
+@keyframes loaderFinish {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); box-shadow: 0 0 26px rgba(255, 122, 0, 0.55), var(--shadow-orange); }
+  100% { transform: scale(1); box-shadow: var(--shadow-orange); }
+}
 .loader-spinner {
   width: 40px; height: 40px; border-radius: 50%;
   border: 3px solid rgba(255, 122, 0, 0.22); border-top-color: var(--orange); animation: spin 0.8s linear infinite;
@@ -471,6 +491,26 @@ button.project { padding: 0; border: 0; background: none; color: inherit; font: 
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes loaderPulse { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
 @keyframes loaderLogoIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ---- Handwritten "JE" signature intro (3s): write → glow + scale ---- */
+.intro-sign {
+  font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 700;
+  line-height: 1; letter-spacing: 0.02em;
+  font-size: clamp(2.15rem, 4.5vw, 3.15rem);
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  padding: 0.08em 0.14em; overflow: visible;
+  background: linear-gradient(135deg, #F6E6C8 0%, #F2A43A 55%, #FFD88A 100%);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent; -webkit-text-fill-color: transparent;
+  clip-path: inset(0 100% 0 0);
+  animation: signWrite 1.6s ease forwards, signFinish 0.7s ease 1.6s both;
+}
+@keyframes signWrite { to { clip-path: inset(0 0 0 0); } }
+@keyframes signFinish {
+  0% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(242, 164, 58, 0)); }
+  50% { transform: scale(1.05); filter: drop-shadow(0 0 16px rgba(242, 164, 58, 0.55)); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(242, 164, 58, 0)); }
+}
 @media (max-width: 940px) { .loader-logo { width: 100px; height: 100px; } }
 @media (max-width: 600px) { .loader-logo { width: 90px; height: 90px; } }
 
