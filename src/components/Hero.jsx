@@ -8,10 +8,12 @@ export default function Hero() {
         <div className="hero-copy">
           <p className="hero-hi">Hi, I&apos;m</p>
           <h1>Jenson Eldho</h1>
-          <p className="hero-role">Professional Video Editor</p>
+          <p className="hero-role">Creative Video Editor &amp; Videographer</p>
           <p className="hero-sub">
-            I transform raw footage into cinematic stories that engage audiences
-            and help brands, creators, and businesses grow through creative editing.
+            I create cinematic visuals from concept to final delivery—combining
+            professional videography, creative editing, color grading, sound design,
+            and motion graphics to craft stories that connect with audiences across
+            brands, events, and social media.
           </p>
 
           <div className="hero-stats">

@@ -1,6 +1,7 @@
-import { FaVideo, FaVolumeUp, FaMobileAlt, FaFilm } from 'react-icons/fa'
+import { FaVolumeUp, FaMobileAlt, FaFilm } from 'react-icons/fa'
+import { FiScissors } from 'react-icons/fi'
 import { HiOutlineSparkles } from 'react-icons/hi'
-import { MdOutlineColorLens } from 'react-icons/md'
+import { MdOutlineColorLens, MdOutlineVideocam } from 'react-icons/md'
 
 export const stats = [
   { num: '100+', label: 'Videos Edited' },
@@ -32,8 +33,13 @@ export const marquee = [
 
 export const services = [
   {
-    icon: FaVideo, title: 'Video Editing',
-    desc: 'Narrative-first edits with tight pacing, seamless cuts, and rhythm that keeps viewers watching to the last frame.',
+    icon: MdOutlineVideocam, title: 'Videography',
+    desc: 'Professional videography for brands, events, promotions, and social media. Capturing cinematic footage with careful composition, lighting, and storytelling to create impactful visual content.',
+    tags: ['Cinematography', 'Lighting', 'Composition'],
+  },
+  {
+    icon: FiScissors, title: 'Video Editing',
+    desc: 'Professional video editing with seamless storytelling, cinematic pacing, and polished visuals. From filming to final delivery, every project is crafted to create a lasting impact.',
     tags: ['Premiere Pro', 'Storytelling', 'Pacing'],
   },
   {
@@ -79,6 +85,7 @@ export const software = [
 
 export const skillBars = [
   { name: 'Video Editing', level: 96 },
+  { name: 'Videography', level: 90 },
   { name: 'Color Grading', level: 90 },
   { name: 'Motion Graphics', level: 65 },
   { name: 'Sound Design', level: 78 },
@@ -122,9 +129,10 @@ export const testimonials = [
 
 export const process = [
   { n: '01', title: 'Discovery', desc: 'We align on goals, references, and the story you want the footage to tell.' },
-  { n: '02', title: 'Assembly', desc: 'I build the structure — selects, pacing, and a rough cut for your review.' },
-  { n: '03', title: 'Polish', desc: 'Motion graphics, color grade, and sound design bring it to a cinematic finish.' },
-  { n: '04', title: 'Delivery', desc: 'Final exports tuned for every platform, with revisions until it’s perfect.' },
+  { n: '02', title: 'Videography', desc: 'Capture high-quality cinematic footage with careful planning, creative camera work, and attention to lighting and composition.' },
+  { n: '03', title: 'Assembly', desc: 'I build the structure — selects, pacing, and a rough cut for your review.' },
+  { n: '04', title: 'Polish', desc: 'Motion graphics, color grade, and sound design bring it to a cinematic finish.' },
+  { n: '05', title: 'Delivery', desc: 'Final exports tuned for every platform, with revisions until it’s perfect.' },
 ]
 
 export const pricing = [

@@ -16,15 +16,16 @@ export default function About() {
           <span className="eyebrow">About Me</span>
           <h2 className="section-title">Cinematic edits, told with intention</h2>
           <p>
-            I’m Jenson Eldho — a professional video editor obsessed with pacing,
-            emotion, and the details that make footage feel like film. From
-            documentaries and brand spots to music videos and short-form, I turn
-            raw clips into stories people actually finish watching.
+            I’m Jenson Eldho, a Creative Video Editor &amp; Videographer passionate
+            about transforming ideas into compelling visual stories. From planning
+            and filming to editing, color grading, sound design, and motion graphics,
+            I manage every stage of the creative process to produce engaging,
+            platform-ready content.
           </p>
           <p>
-            Every project is a collaboration. I listen to your goals, protect the
-            story, and sweat the frame-level craft — so the final cut looks
-            premium and performs.
+            Whether it’s promotional videos, event coverage, social media campaigns,
+            or short films, my focus is always on delivering polished visuals that
+            leave a lasting impression.
           </p>
           <ul className="about-points">
             {aboutPoints.map((p) => (

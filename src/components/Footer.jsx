@@ -1,4 +1,4 @@
-import { FaYoutube, FaInstagram, FaLinkedinIn, FaBehance } from 'react-icons/fa'
+import { FaYoutube, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import { SiGoogledrive } from 'react-icons/si'
 
 const DRIVE_URL = 'https://drive.google.com/drive/folders/1F2YVh0emk5rKyzZfyq59B2xFz9cOc4OY?usp=sharing'
@@ -21,6 +21,7 @@ export default function Footer() {
           <div className="footer-cols">
             <div className="footer-col">
               <h5>Services</h5>
+              <a href="#videography">Videography</a>
               <a href="#video-editing">Video Editing</a>
               <a href="#motion-graphics">Motion Graphics</a>
               <a href="#color-grading">Color Grading</a>
@@ -49,7 +50,6 @@ export default function Footer() {
             <a href="https://youtube.com/@jensoneldho904?si=udlKvJRbkPaQoNVz" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube /></a>
             <a href="https://www.instagram.com/jenson_eldho?igsh=MWdrOHgyNXpqMG1kZg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
             <a href="https://www.linkedin.com/in/jenson-eldho-7a3097342?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
-            <a href="https://www.behance.net/jensoneldho" target="_blank" rel="noopener noreferrer" aria-label="Behance"><FaBehance /></a>
             <a href={DRIVE_URL} target="_blank" rel="noopener noreferrer" aria-label="Google Drive portfolio"><SiGoogledrive /></a>
           </div>
         </div>
